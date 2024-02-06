@@ -3,16 +3,29 @@
 <head>
 
     <title>My first Vue Page</title>
+    <style>
+        .pinkBG{
+            background-color: lightblue;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">{{ message }}</div>
+    <div id="app">
+        {{ message }}
+        <br>
+        {{'Random number: ' + Math.ceil(Math.random()*6)}}
+        <div v-bind:class="vueClass">
+            <p>Hi</p>
+        </div>
+
+    </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
 
         const app = Vue.createApp({
           data() {
             return {
-              message: "Hello World!"
+              vueClass: "pinkBG"
             }
           }
         })
