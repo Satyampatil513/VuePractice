@@ -14,7 +14,7 @@
         {{ message }}
         <br>
         {{'Random number: ' + Math.ceil(Math.random()*6)}}
-        <div v-bind:class="vueClass">
+        <div :class="vueClass">
             <p v-bind:style="{fontSize: size}">Hi</p>
         </div>
         <!-- <div v-bind:[attribute]="[Vue data]"></div> -->
