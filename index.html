@@ -17,6 +17,10 @@
         <div :class="vueClass">
             <p v-bind:style="{fontSize: size}">Hi</p>
         </div>
+        <p v-if="hello"> Hello</p>
+        <p v-else-if="helloCount>4"> 4+ Hello</p>
+        <p v-else-if="hellotext.includes('Amit')"> Hi {{hellotext}}</p>
+        <p v-else> Bye</p>
         <!-- <div v-bind:[attribute]="[Vue data]"></div> -->
 
     </div>
@@ -27,7 +31,10 @@
           data() {
             return {
               vueClass: "pinkBG",
-              size: '28px'
+              size: '28px',
+              hello: false,
+              helloCount: 4,
+              hellotext: 'Amit'
             }
           }
         })
