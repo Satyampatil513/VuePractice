@@ -15,8 +15,9 @@
         <br>
         {{'Random number: ' + Math.ceil(Math.random()*6)}}
         <div v-bind:class="vueClass">
-            <p>Hi</p>
+            <p v-bind:style="{fontSize: size}">Hi</p>
         </div>
+        <!-- <div v-bind:[attribute]="[Vue data]"></div> -->
 
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -25,7 +26,8 @@
         const app = Vue.createApp({
           data() {
             return {
-              vueClass: "pinkBG"
+              vueClass: "pinkBG",
+              size: '28px'
             }
           }
         })
