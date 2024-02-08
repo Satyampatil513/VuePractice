@@ -22,9 +22,12 @@
         <p v-else-if="hellotext.includes('Amit')"> Hi {{hellotext}}</p>
         <p v-else> Bye</p>
         <p v-show="Namaskar"> Namaskar</p>
-        <p v-for="(x,index) in manyNames">
+        <p v-for="(x,index) in manyNames" v-on:click="hellotext = x">
           {{index}}: {{x}} <br>
         </p>
+        <p> {{hellotext}}</p>
+        <p> {{"People Count: " + count}}</p>
+        <button v-on:click="count++">Count People</button>
         <!-- <div v-bind:[attribute]="[Vue data]"></div> -->
 
     </div>
@@ -40,7 +43,8 @@
               helloCount: 4,
               hellotext: 'Amit',
               Namaskar: true,
-              manyNames: ["ram","sham","sita","raman"]
+              manyNames: ["ram","sham","sita","raman"],
+              count:0
             }
           }
         })
