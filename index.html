@@ -38,10 +38,12 @@
         <!-- <div v-bind:[attribute]="[Vue data]"></div> -->
 
     </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
 
         const app = Vue.createApp({
+          template:`<h1>Hi</h1>`,
           data() {
             return {
               vueClass: "pinkBG",
@@ -85,5 +87,6 @@
        app.mount('#app')
       
       </script>
+
 </body>
 </html>
