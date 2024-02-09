@@ -25,7 +25,8 @@
         <p v-for="(x,index) in manyNames" v-on:click="hellotext = x">
           {{index}}: {{x}} <br>
         </p>
-        <p> {{hellotext}}</p>
+        <p v-on:click="isUpdated"> {{hellotext}}</p>
+        <p>{{helloupdated}}</p>
         <p> {{"People Count: " + count}}</p>
         <button v-on:click.once="writeText">Click here for methods</button>
         <button v-on:click="count++">Count People</button>
@@ -48,11 +49,18 @@
               hello: false,
               helloCount: 4,
               hellotext: 'Amit',
+              helloupdated: 'Amit',
               Namaskar: true,
               manyNames: ["ram","sham","sita","raman"],
               count:0,
               itemName: null,
               FriendList: []
+            }
+          },
+          computed: {
+            isUpdated(){
+
+              this.helloupdated = this.hellotext +'hello'
             }
           },
           methods: {
