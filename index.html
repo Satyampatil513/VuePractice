@@ -27,6 +27,7 @@
         </p>
         <p> {{hellotext}}</p>
         <p> {{"People Count: " + count}}</p>
+        <button v-on:click="writeText">Click here for methods</button>
         <button v-on:click="count++">Count People</button>
         <!-- <div v-bind:[attribute]="[Vue data]"></div> -->
 
@@ -45,6 +46,11 @@
               Namaskar: true,
               manyNames: ["ram","sham","sita","raman"],
               count:0
+            }
+          },
+          methods: {
+            writeText(){
+              this.hellotext = this.hellotext + 'Hello'
             }
           }
         })
