@@ -29,6 +29,11 @@
         <p> {{"People Count: " + count}}</p>
         <button v-on:click.once="writeText">Click here for methods</button>
         <button v-on:click="count++">Count People</button>
+        <form v-on:submit.prevent="addFriend">
+          <p>Friend Name : <input type="text" required v-model="itemName"> </p>
+          <button type="submit"> Add Friend</button>
+        </form>
+        <p v-for="x in FriendList"> {{x}}</p>
         <!-- <div v-bind:[attribute]="[Vue data]"></div> -->
 
     </div>
@@ -45,12 +50,17 @@
               hellotext: 'Amit',
               Namaskar: true,
               manyNames: ["ram","sham","sita","raman"],
-              count:0
+              count:0,
+              itemName: null,
+              FriendList: []
             }
           },
           methods: {
             writeText(){
               this.hellotext = this.hellotext + 'Hello'
+            },
+            addFriend(){
+              this.FriendList.push(this.itemName)
             }
           }
         })
