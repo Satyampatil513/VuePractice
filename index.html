@@ -63,6 +63,14 @@
               this.helloupdated = this.hellotext +'hello'
             }
           },
+          watch: {
+            hellotext(val){
+              if(val=='sham'){
+                this.hellotext='shaaaamiu'
+              }
+            }
+          },
+          
           methods: {
             writeText(){
               this.hellotext = this.hellotext + 'Hello'
@@ -72,6 +80,7 @@
             }
           }
         })
+      
       
        app.mount('#app')
       
