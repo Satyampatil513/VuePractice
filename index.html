@@ -27,7 +27,7 @@
         </p>
         <p> {{hellotext}}</p>
         <p> {{"People Count: " + count}}</p>
-        <button v-on:click="writeText">Click here for methods</button>
+        <button v-on:click.once="writeText">Click here for methods</button>
         <button v-on:click="count++">Count People</button>
         <!-- <div v-bind:[attribute]="[Vue data]"></div> -->
 
