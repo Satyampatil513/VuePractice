@@ -10,6 +10,10 @@ export default {
 
 <template>
   <h1>{{message}}</h1>
+  <food-item/>
+  <food-item/>
+  <food-item/>
+
 </template>
 
 <style>
